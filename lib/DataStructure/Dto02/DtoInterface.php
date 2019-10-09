@@ -1,6 +1,6 @@
 <?php
 
-namespace Dto01\DataStructure\Dto;
+namespace DtoStudy\DataStructure\Dto02;
 
 interface DtoInterface
 {

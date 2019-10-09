@@ -1,6 +1,6 @@
 <?php
 
-namespace Dto01\DataStructure\Dto;
+namespace DtoStudy\DataStructure\Dto02;
 
 /**
  * DTOの基礎部分の実装
@@ -39,9 +39,6 @@ trait DtoTrait
      */
     public function __get($name)
     {
-        if (method_exists($this, 'get' . $name)) {
-            return $this->{'get' . $name}();
-        }
         if (!property_exists($this, $name)) {
             throw new \InvalidArgumentException(
                 sprintf('The field "%s" does not exists.', $name)
@@ -103,9 +100,6 @@ trait DtoTrait
      */
     final public function __set($name, $value)
     {
-        if (method_exists($this, 'set' . $name)) {
-            $this->{'set' . $name}($value);
-        }
         if (!property_exists($this, $name)) {
             throw new \InvalidArgumentException(
                 sprintf('The field "%s" does not exists.', $name)
@@ -132,10 +126,6 @@ trait DtoTrait
      */
     public function offsetSet($name, $value)
     {
-        if (method_exists($this, 'set' . $name)) {
-            $this->{'set' . $name}($value);
-            return;
-        }
         if ($this->offsetExists($name)) {
             $this->$name = $value;
             return;

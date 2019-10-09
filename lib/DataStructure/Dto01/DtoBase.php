@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Dto01\DataStructure\Dto;
+namespace DtoStudy\DataStructure\Dto01;
 
 /**
  * DTOの基底

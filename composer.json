@@ -4,7 +4,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Dto01\\": "lib"
+      "DtoStudy\\": "lib"
     }
   }
 }
