@@ -1,5 +1,10 @@
 {
-    "require": {
-        "phpunit/phpunit": "^8.4"
+  "require": {
+    "phpunit/phpunit": "^8.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dto01\\": "lib"
     }
+  }
 }
